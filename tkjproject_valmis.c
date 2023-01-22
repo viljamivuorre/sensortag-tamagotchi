@@ -1,7 +1,7 @@
 /*
- * Viljami Vuorre
- * Toivo Xiong
- * Riku Kyll�nen
+ * JTKJ harjoitustyö syksy 2022
+ * sensortag 'Tamagotchi' joka elää taustajärjestelmässä
+ * 
  */
 
 #include <sounds.h>
@@ -39,8 +39,6 @@ Char getDataTaskStack[STACKSIZE];
 
 /*STATES*/
 
-enum communication {GATEWAY=0, RADIO};
-enum communication commState = GATEWAY;
 enum state {WAITING=0, READ_DATA, UPLOAD};
 enum state programState = WAITING;
 
@@ -62,7 +60,6 @@ float gx;
 float gy;
 float gz;
 
-char radioBuffer[160];
 uint8_t uartBuffer[16];
 char uartStr[80];
 
